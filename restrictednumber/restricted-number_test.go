@@ -1,17 +1,16 @@
 package restrictednumber
 
 import (
-	resn "github.com/seiyria/restricted-number-go/restrictednumber"
 	"testing"
 
 	. "github.com/smartystreets/goconvey/convey"
 )
 
 func TestRestrictedNumber(t *testing.T) {
-	var rn *resn.RestrictedNumber
+	var rn *RestrictedNumber
 
 	Convey("Instantiation works", t, func() {
-		rn = resn.New()
+		rn = New()
 		So(rn.Max(), ShouldEqual, 0)
 	})
 }
