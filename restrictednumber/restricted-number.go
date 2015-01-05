@@ -101,7 +101,7 @@ func (rn *RestrictedNumber) AsPercent() int {
 }
 
 func (rn *RestrictedNumber) getPercent(perc int) int {
-	return int(math.Floor(float64(perc) / float64(rn.max) * 100))
+	return int(math.Floor(float64(perc) * float64(rn.max) / 100))
 }
 
 func (rn *RestrictedNumber) SetToPercent(perc int) {
